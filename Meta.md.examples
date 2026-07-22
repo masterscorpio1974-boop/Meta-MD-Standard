@@ -1,0 +1,5 @@
+# Project: GestorMasterS-app
+- Owner: scorpiomaster066-art
+- Stack: Termux, Android, Gradle 8.5, JDK 17
+- Issue: cli/cli#13920
+- Rule: Never ask same info twice. If confused, reload this file. Always warn if build will fail and why.
