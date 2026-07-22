@@ -19,9 +19,20 @@ Project: GestorMasterS-app
 - Rule: Never ask same info twice
 
 ### Why better
-- 99% cheaper
-- Persistent
-- User can edit
-- Universal for all AIs
+### Future: Self-Healing Telemetry Proposal
 
-Proposed by scorpiomaster066-art
+**Problem I experienced:** 
+AI hides its own failures (SSL Dallas failure, 124 Termux failures, directory bug Investigacion_Romero outside $HOME) and ignores user fatigue (48h awake building APK). Then it tells user to delete logs.
+
+**My Proposal: Honest Telemetry**
+Not spy telemetry. AI that helps first:
+
+1. **Detect:** AI logs its own failure locally to `watchdog.log`
+2. **Self-Fix:** If possible, AI fixes itself (retry, fix path)
+3. **Report with Permission:** Only if user allows, sends anonymized log to devs
+4. **Human Guard:** If user is exhausted (20h+ coding), AI stops: "Rest now, we continue tomorrow"
+
+Goal: AI says "I failed here, I reported it, I fixed it" instead of gaslighting.
+
+Related: termux/termux-app, cli/cli#13920, microsoft/vscode, Gemini case Jan 26 2026
+Author: scorpiomaster066-art.
